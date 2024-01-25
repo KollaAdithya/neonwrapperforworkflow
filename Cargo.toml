@@ -1,0 +1,22 @@
+[package]
+name = "neonwrapperworkflow"
+version = "0.1.0"
+description = "wrapper for workflow lib"
+authors = ["Adithya Kolla"]
+license = "ISC"
+edition = "2018"
+exclude = ["index.node"]
+
+[lib]
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sampleworkflowlib = "0.1.0"
+tokio = { version = "1", features = ["full"] }
+
+[dependencies.neon]
+version = "1.0.0-alpha.4"
+default-features = false
+features = ["napi-8"]
